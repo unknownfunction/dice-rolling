@@ -14,7 +14,7 @@ class Dice:
 class Play:
     def __init__(self, name=input('would you like to play: Y or N')):
         self.name = name
-        if self.name == 'Y' or 'y':
+        if self.name == 'Y':
             print('rolling')
             for i in range(Dice.number_of_dice):
                 roll.append(randint(1, Dice.sides))
