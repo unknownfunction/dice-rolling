@@ -1,0 +1,29 @@
+from random import randint
+
+roll = []
+
+class Player:
+    def __init__(self, name=input('what is your name')):
+        self.name = name
+
+class Dice:
+    def __init__(self, number_of_dice=int(input('how many dice will you roll')), sides=int(input('how many sides does your dice have'))):
+        self.number_of_dice = number_of_dice
+        self.sides = sides
+
+class Play:
+    def __init__(self, name=input('would you like to play: Y or N')):
+        self.name = name
+        if self.name == 'Y' or 'y':
+            print('rolling')
+            for i in range(Dice.number_of_dice):
+                roll.append(randint(1, Dice.sides))
+            print(f'{Player.name} you rolled {roll}')
+        else:
+            print('Bye')
+
+
+
+Player = Player()
+Dice = Dice()
+Play = Play()
